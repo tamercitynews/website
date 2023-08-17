@@ -1,10 +1,21 @@
 :root {
   --white: #fffffd;
-  --black: black;
+  --black: #000;
   --blue: #332e71;
   --blue-dark: #201c4a;
   --pink: #f81d94;
   --green: #3fe6c5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: #fefefe;
+    --black: #000;
+    --blue: #44425d;
+    --blue-dark: #2b2a3c;
+    --pink: #b65f8e;
+    --green: #71b4a7;
+  }
 }
 
 @keyframes move {
