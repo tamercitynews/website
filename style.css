@@ -117,11 +117,11 @@ a {
 }
 
 .h-full {
-  height: 100vmin;
+  height: 100vh;
 }
 
 .w-full {
-  width: 100vmin;
+  width: 100vw;
 }
 
 .block {
