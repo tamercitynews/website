@@ -37,7 +37,7 @@ p {
 
 blockquote {
   position: relative;
-  font-size: clamp(1rem, 5dvw, 40px);
+  font-size: clamp(1rem, 8dvw, 40px);
   line-height: 1.5;
   &::before {
     position: absolute;
