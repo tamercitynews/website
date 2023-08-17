@@ -1,0 +1,9 @@
+{
+  "name": "Tamer",
+  "theme_color": "#201c4a",
+  "background_color": "#201c4a",
+  "display": "standalone",
+  "orientation": "landscape",
+  "scope": "/",
+  "start_url": "/"
+}
