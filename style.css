@@ -1,0 +1,209 @@
+:root {
+  --white: white;
+  --black: black;
+  --red: #E63946;
+  --gray: #dad7cd;
+  --blue-light: #A8DADC;
+  --blue-base: #457B9D;
+  --blue-dark: #1D3557;
+  --purple-light: #7b2cbf;
+  --purple-base: #5a189a;
+  --purple-dark: #3c096c;
+}
+
+@keyframes move {
+	to {
+		left: 0px;
+		/* Move horizontally so that right edge is aligned against the viewport */
+		transform: translateX(calc(-100% + 100vw));
+	}
+}
+
+html,
+body,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(1rem, 1.2rem, 30px);
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+blockquote {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(1rem, 5dvw, 40px);
+  line-height: 1.5;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 0;
+    height: 100%;
+    width: .5rem;
+    background-color: currentColor;
+  }
+}
+
+h1,h2, h3, .horizon__item {
+  margin: .5rem 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+h1, .horizon__item {
+  font-size: clamp(30px, 18dvw, 130px);
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+time,
+em {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: .5rem 0;
+}
+
+section {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  padding: 2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.black {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.red {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.gray {
+  background-color: var(--gray);
+  color: var(--black);
+}
+
+.blue-light {
+  background-color: var(--blue-light);
+  color: var(--black);
+}
+
+.blue-base{
+  background-color: var(--blue-base);
+  color: var(--white);
+}
+
+.blue-dark{
+  background-color: var(--blue-dark);
+  color: var(--white);
+}
+
+.purple-light{
+  background-color: var(--purple-light);
+  color: var(--black);
+}
+
+.purple-dark{
+  background-color: var(--purple-dark);
+  color: var(--white);
+}
+
+.horizon{
+	height: 500dvh;
+	
+	/* Stretch it out, so that we create room for the horizontal scroll animation */
+	
+	overflow: visible; /* To make position sticky work … */
+	view-timeline-name: --section-pin-tl;
+	view-timeline-axis: block;
+}
+
+.horizon__container {
+	/* Stick to Top */
+	position: sticky;
+	top: 0;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.horizon__content {
+	align-content: center;
+	width: fit-content;
+	height: fit-content;
+	animation: linear move forwards;
+  
+	/* Hook animation */
+	will-change: transform;
+
+	/* Link animation to view-timeline */
+	animation-timeline: --section-pin-tl;
+	animation-range: contain 0% contain 100%;
+}
+
+.horizon__item {
+  padding: 2rem;
+}
+
+.h-full {
+  height: 100dvh;
+}
+
+.w-full {
+  width: 100dvw;
+}
+
+.block {
+  display: block;
+}
+
+.experience {
+  padding: 0 10% 0 5%;
+  position: relative;
+  &::after,
+  &::before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    background-color: currentColor;
+    top: 50%;
+  }
+  &::after {
+    left: 0;
+    width: 8%;
+  }
+  &::before {
+    right: 0;
+    width: 18%;
+  }
+}
