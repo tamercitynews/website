@@ -146,6 +146,10 @@ a {
   margin: 0 auto;
 }
 
+.strong {
+  color: var(--pink);
+}
+
 /* Items */
 
 .horizon{
@@ -209,9 +213,6 @@ a {
 .black-green {
   background-color: var(--black);
   color: var(--green);
-  .strong {
-    color: var(--white);
-  }
 }
 
 .black-pink {
@@ -237,10 +238,6 @@ a {
 .blue-green {
   background-color: var(--blue-dark);
   color: var(--green);
-  .strong {
-    color: var(--pink);
-  }
-
 }
 
 .green-blue {
