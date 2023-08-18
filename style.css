@@ -18,6 +18,7 @@
   }
 }
 
+
 @keyframes move {
 	to {
 		left: 0px;
@@ -70,7 +71,7 @@ h1,h2, h3, .horizon__item {
 }
 
 h1, .horizon__item {
-  font-size: clamp(30px, 18dvw, 130px);
+  font-size: clamp(30px, 16dvw, 130px);
 }
 
 h2 {
@@ -110,6 +111,7 @@ a {
 } 
 
 /* Utilities */
+
 
 .flex {
   display: flex;
