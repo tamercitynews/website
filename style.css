@@ -188,6 +188,7 @@ a {
   padding: 2rem;
 }
 
+.skill,
 .experience {
   position: relative;
   padding: 0 5%;
@@ -205,6 +206,20 @@ a {
   }
   &::before {
     right: 0;
+  }
+}
+
+.skill {
+  &::after,
+  &::before {
+    background-color: var(--green);
+  }
+}
+
+.experience {
+  &::after,
+  &::before {
+    background-color: var(--pink);
   }
 }
 
