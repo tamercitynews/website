@@ -114,7 +114,7 @@ em {
 section {
   position: sticky;
   top: 0;
-  height: 100dvh;
+  z-index: 0;
   padding: 2rem;
 }
 
@@ -174,8 +174,8 @@ a:hover {
 /* Items */
 
 .horizon{
-  position: relative;
-  z-index: 3;
+  position: sticky;
+  top: 0;
   height: 500dvh;
   /* Stretch it out, so that we create room for the horizontal scroll animation */
   
@@ -248,22 +248,26 @@ a:hover {
   background-color: var(--pink);
 }
 
+.cover {
+  z-index: 2;
+}
+
 .tamer {
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
+  width: auto;
+  height: 100vh;
   transition: mix-blend-mode .6s;
   filter: grayscale(100%);
   mix-blend-mode: soft-light;
-  height: 100vh;
-  width: auto;
 }
 
-@media screen and (min-width: 1400px){
+@media screen and (min-width: 1200px){
   .tamer {
-    mix-blend-mode: hard-light;
     height: auto;
+    mix-blend-mode: hard-light;
   }
 }
 
