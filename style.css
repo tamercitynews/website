@@ -18,6 +18,22 @@
   }
 }
 
+@keyframes draw {
+  from {
+    stroke-dashoffset: 500;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animated {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: draw 2s ease-in-out forwards;
+}
+
 
 @keyframes move {
 	to {
@@ -51,20 +67,20 @@ blockquote {
   position: relative;
   font-size: clamp(1rem, 8dvw, 40px);
   line-height: 1.5;
-  &::before {
-    position: absolute;
-    top: 0;
-    left: -1.5rem;
-    content: '';
-    width: .5rem;
-    height: 100%;
-    background-color: currentColor;
-  }
+}
+
+blockquote::before {
+  position: absolute;
+  top: 0;
+  left: -1.5rem;
+  content: '';
+  width: .5rem;
+  height: 100%;
+  background-color: currentColor;
 }
 
 h1,h2, h3, .horizon__item {
   margin: .5rem 0;
-  /* font-family: 'Roboto', sans-serif; */
   font-family: 'Work Sans', sans-serif;
   line-height: 1;
   text-transform: capitalize;
@@ -105,10 +121,11 @@ section {
 a {
   color: currentColor;
   text-decoration: none;
-  &:hover {
-    color: var(--pink);
-  }
 } 
+
+a:hover {
+  color: var(--pink);
+}
 
 /* Utilities */
 
@@ -150,38 +167,43 @@ a {
   color: var(--pink);
 }
 
+.overflow-x {
+  overflow-x: hidden;
+}
+
 /* Items */
 
 .horizon{
-	height: 500dvh;
-	
-	/* Stretch it out, so that we create room for the horizontal scroll animation */
-	
-	overflow: visible; /* To make position sticky work … */
-	view-timeline-name: --section-pin-tl;
-	view-timeline-axis: block;
+  position: relative;
+  z-index: 3;
+  height: 500dvh;
+  /* Stretch it out, so that we create room for the horizontal scroll animation */
+  
+  overflow: visible; /* To make position sticky work … */
+  view-timeline-name: --section-pin-tl;
+  view-timeline-axis: block;
 }
 
 .horizon__container {
-	/* Stick to Top */
-	position: sticky;
-	top: 0;
-	overflow-x: hidden;
-	overflow-y: hidden;
+  /* Stick to Top */
+  position: sticky;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .horizon__content {
-	align-content: center;
-	width: fit-content;
-	height: fit-content;
-	animation: linear move forwards;
+  align-content: center;
+  width: fit-content;
+  height: fit-content;
+  animation: linear move forwards;
   
-	/* Hook animation */
-	will-change: transform;
+  /* Hook animation */
+  will-change: transform;
 
-	/* Link animation to view-timeline */
-	animation-timeline: --section-pin-tl;
-	animation-range: contain 0% contain 100%;
+  /* Link animation to view-timeline */
+  animation-timeline: --section-pin-tl;
+  animation-range: contain 0% contain 100%;
 }
 
 .horizon__item {
@@ -192,36 +214,59 @@ a {
 .experience {
   position: relative;
   padding: 0 5%;
-  &::after,
-  &::before {
-    position: absolute;
-    top: 50%;
-    content: '';
-    height: 2px;
-    background-color: var(--pink);
-    width: 10%;
-  }
-  &::after {
-    left: 0;
-  }
-  &::before {
-    right: 0;
+}
+
+.experience::after,
+.experience::before,
+.skill::after,
+.skill::before {
+  position: absolute;
+  top: 50%;
+  content: '';
+  width: 10%;
+  height: 2px;
+  background-color: var(--pink);
+}
+
+.experience::after,
+.skill::after {
+  left: 0;
+}
+
+.experience::before,
+.skill::before {
+  right: 0;
+}
+
+.skill::after,
+.skill::before {
+  background-color: var(--black);
+}
+
+.experience::after,
+.experience::before {
+  background-color: var(--pink);
+}
+
+.tamer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  transition: mix-blend-mode .6s;
+  filter: grayscale(100%);
+  mix-blend-mode: soft-light;
+  height: 100vh;
+  width: auto;
+}
+
+@media screen and (min-width: 1400px){
+  .tamer {
+    mix-blend-mode: hard-light;
+    height: auto;
   }
 }
 
-.skill {
-  &::after,
-  &::before {
-    background-color: var(--green);
-  }
-}
-
-.experience {
-  &::after,
-  &::before {
-    background-color: var(--pink);
-  }
-}
 
 /* Themes */
 
@@ -230,24 +275,9 @@ a {
   color: var(--green);
 }
 
-.black-pink {
-  background-color: var(--black);
-  color: var(--pink);
-}
-
 .white-blue {
   background-color: var(--white);
   color: var(--blue);
-}
-
-.green-blue {
-  background-color: var(--green);
-  color: var(--blue);
-}
-
-.blue-pink {
-  background-color: var(--blue-dark);
-  color: var(--pink);
 }
 
 .blue-green {
