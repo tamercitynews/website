@@ -51,9 +51,11 @@ html,
 body{
   margin: 0;
   padding: 0;
-  /* font-family: 'Nunito', sans-serif; */
 
   font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Nunito', sans-serif; */
+  font-size: clamp(1rem, 1.2rem, 30px);
+  line-height: 1.5;
 
 }
 
@@ -136,6 +138,10 @@ a:hover {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .items-center {
@@ -266,11 +272,23 @@ a:hover {
 
 @media screen and (min-width: 1200px){
   .tamer {
-    height: auto;
+    /* height: auto; */
     mix-blend-mode: hard-light;
   }
 }
 
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+@media screen and (min-width: 900px) {
+  .socials {
+    justify-content: space-between;
+  }
+}
 
 /* Themes */
 
