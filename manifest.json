@@ -3,7 +3,7 @@
   "short_name": "Tamer",
   "description": "Tamer's personal space",
   "lang":"eng",
-  "start_url": ".",
+  "start_url": "https://aka-tamer.netlify.app/",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#332e71",
