@@ -1,10 +1,13 @@
 {
   "name": "Tamer",
   "short_name": "Tamer",
+  "description": "Tamer's personal space",
+  "lang":"eng",
   "start_url": ".",
   "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#332e71",
   "background_color": "#332e71",
-  "description": "Tamer's personal space",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
