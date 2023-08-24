@@ -263,14 +263,13 @@ a:hover {
   height: 100vh;
   transition: mix-blend-mode .6s;
   filter: grayscale(100%);
-  mix-blend-mode: soft-light;
+  mix-blend-mode: hard-light;
 }
 
 @media screen and (min-width: 1200px){
   .tamer {
     right: 0;
     left: auto;
-    mix-blend-mode: hard-light;
   }
 }
 
