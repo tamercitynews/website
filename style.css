@@ -29,9 +29,18 @@
 }
 
 .animated {
+  opacity: .5;
+  height: 100%;
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
-  animation: draw 2s ease-in-out forwards;
+
+  view-timeline-name: --revealing-image;
+  view-timeline-axis: block;
+
+  animation: auto linear draw both;
+  animation-timeline: --revealing-image;
+  animation-range: entry 25% cover 50%;
+
 }
 
 
@@ -171,6 +180,29 @@ a:hover {
 
 .overflow-x {
   overflow-x: hidden;
+}
+
+.dynamic {
+  position: sticky;
+  @media screen and (min-width: 500px){
+    position: absolute;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.top {
+  top: 1rem;
+}
+
+.bottom {
+  bottom: 1rem;
+}
+
+.right {
+  right: 1rem;
 }
 
 /* Items */
