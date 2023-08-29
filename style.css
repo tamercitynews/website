@@ -21,25 +21,42 @@
 @keyframes draw {
   from {
     stroke-dashoffset: 500;
+    opacity: .5;
   }
 
   to {
     stroke-dashoffset: 0;
+    opacity: 1;
   }
 }
 
 .animated {
-  opacity: .5;
-  height: 100%;
+
+  --animated-h: 100%;
+  --animated-p: absolute;
+  --animated-b: 1rem;
+  --animated-r: 1rem;
+  position: var(--animated-p);
+  right: var(--animated-r);
+  bottom: var(--animated-b);
+
+  height: var(--animated-h);
+
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
 
+  animation: auto linear draw both;
+
+  translate: 0 -50%;
+
   view-timeline-name: --revealing-image;
   view-timeline-axis: block;
-
-  animation: auto linear draw both;
   animation-timeline: --revealing-image;
-  animation-range: entry 25% cover 50%;
+  animation-range: entry 1% cover 10%;
+
+  @media screen and (min-width: 500px){
+    --animated-h: 100%;
+  }
 
 }
 
@@ -182,28 +199,11 @@ a:hover {
   overflow-x: hidden;
 }
 
-.dynamic {
-  position: sticky;
-  @media screen and (min-width: 500px){
-    position: absolute;
-  }
-}
-
 .relative {
   position: relative;
 }
 
-.top {
-  top: 1rem;
-}
 
-.bottom {
-  bottom: 1rem;
-}
-
-.right {
-  right: 1rem;
-}
 
 /* Items */
 
