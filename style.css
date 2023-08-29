@@ -36,10 +36,11 @@
   --animated-p: absolute;
   --animated-b: 1rem;
   --animated-r: 1rem;
+
   position: var(--animated-p);
   right: var(--animated-r);
   bottom: var(--animated-b);
-
+  z-index: -1;
   height: var(--animated-h);
 
   stroke-dasharray: 500;
@@ -47,7 +48,7 @@
 
   animation: auto linear draw both;
 
-  translate: 5% -40%;
+  translate: 5% -20%;
 
   view-timeline-name: --revealing-image;
   view-timeline-axis: block;
