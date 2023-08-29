@@ -47,7 +47,7 @@
 
   animation: auto linear draw both;
 
-  translate: 0 -50%;
+  translate: 5% -40%;
 
   view-timeline-name: --revealing-image;
   view-timeline-axis: block;
