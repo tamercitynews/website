@@ -76,6 +76,13 @@ html {
 
 html,
 body{
+  position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+	border: 0;
+	padding: 0;
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
@@ -137,10 +144,27 @@ em {
   text-transform: uppercase;
 }
 
+.snapper {
+  --block-position: fixed;
+	--block-height: 100%;
+	scroll-snap-type: y mandatory;
+	position: var(--block-position);
+	height: var(--block-height);
+	width: 100%;
+	overflow-y: auto;
+  overflow-x: hidden;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+}
+
 section {
-  position: sticky;
-  top: 0;
+  /* position: sticky;
+  top: 0; */
+  scroll-snap-type: x proximity;
   padding: 1rem;
+  scroll-snap-align: center;
+  flex: none;
+  overflow: hidden;
 }
 
 a {
@@ -211,7 +235,7 @@ a:hover {
 .horizon{
   position: relative;
   top: 0;
-  height: 500dvh;
+  height: 400dvh;
   /* Stretch it out, so that we create room for the horizontal scroll animation */
   
   overflow: visible; /* To make position sticky work … */
