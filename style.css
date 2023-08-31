@@ -211,7 +211,7 @@ a:hover {
 .horizon{
   position: relative;
   top: 0;
-  height: 500dvh;
+  height: 200dvh;
   /* Stretch it out, so that we create room for the horizontal scroll animation */
   
   overflow: visible; /* To make position sticky work … */
