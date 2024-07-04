@@ -47,9 +47,9 @@
     
     <!-- Other relevant SEO metadata -->
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <link rel="manifest" href="manifest.json" />
     
     <!-- mobile specific metas
@@ -93,8 +93,11 @@
   <body>
 
     <section class="blue-green h-full flex flex-col justify-center items-center overflow-x">
-      <img  aria-label="Tamer" src="./tamer.
-      " loading="lazy" height="500" width="375" class="tamer">
+      <figure class="tamer">
+        <source srcset="./tamer.webp" type="image/webp">
+        <source srcset="./tamer.png" type="image/png">
+        <img  aria-label="Tamer" src="./tamer.webp" loading="lazy">
+      </figure>
       <div class="container">
         <h2>Hello, I'm <span class="strong">Tamer</span></h2>
         <h1>Frontend Developer

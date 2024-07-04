@@ -143,6 +143,11 @@ section {
   padding: 1rem;
 }
 
+figure {
+  margin: 0;
+  overflow: hidden;
+}
+
 a {
   color: currentColor;
   text-decoration: none;
@@ -297,6 +302,10 @@ a:hover {
   transition: mix-blend-mode .6s;
   filter: grayscale(100%);
   mix-blend-mode: hard-light;
+}
+
+.tamer img {
+  height: 100%;
 }
 
 @media screen and (min-width: 1200px){
