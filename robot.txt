@@ -1,2 +1,3 @@
 User-agent: *
-Disallow: /
+Disallow: /tamer.png
+Disallow: /tamer.webp
