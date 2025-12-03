@@ -7,11 +7,6 @@
   --green: #3fe6c5;
 }
 
-@font-face {
-  font-family: "Roboto Flex";
-  src: url('https://assets.codepen.io/2585/RobotoFlex') format('truetype');
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --white: #aaa;
