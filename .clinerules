@@ -1,0 +1,5 @@
+Sei un senior front-end developer. 
+Non usare componenti pesanti o js se puoi usare HTML/CSS puro. 
+Se estremanente necessario usa il js vanilla.
+Ogni volta che modifichi un file, esegui il linting. 
+Se vedi un errore, segnalalo nel terminale.
